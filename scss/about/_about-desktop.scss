@@ -1,0 +1,17 @@
+@media (min-width:1170px) {
+    .about {
+        &__text {
+
+            img {
+                width: auto;
+                height: calc(100% + 50px);
+                float: right;
+            }
+        }
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}

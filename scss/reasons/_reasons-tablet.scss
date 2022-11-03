@@ -1,0 +1,56 @@
+@media (min-width:750px) {
+    .reasons {
+        &__wrapper {
+            @include flex(center, wrap);
+            flex-direction: row;
+        }
+
+        &__item {
+            display: flex;
+        }
+
+        &__item-2 {
+            order: 4;
+        }
+
+        &__item-3 {
+            order: 7;
+        }
+
+        &__item-4 {
+            order: 2;
+        }
+
+        &__item-5 {
+            order: 5;
+        }
+
+        &__item-6 {
+            order: 8;
+        }
+
+        &__item-7 {
+            order: 10;
+        }
+
+        &__item-8 {
+            order: 3;
+        }
+
+        &__item-8 {
+            order: 6;
+        }
+
+        &__item-10 {
+            order: 9;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}

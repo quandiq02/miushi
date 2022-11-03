@@ -1,0 +1,87 @@
+@media (min-width:750px) {
+    .sets-slider {
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .slick-dots{
+            bottom: 50px;
+        }
+
+        .sets-slider{
+            position: relative;
+        }
+        .slick-arrow {
+            position: absolute;
+            bottom: 15px;
+            z-index: 20;
+            font-size: 0;
+            width: 25px;
+            height: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            background-color: transparent;
+            background-position: center center;
+        }
+        
+        .slick-prev {
+            left: 30%;
+            background-image: url('../images/right-arrow-active.png');
+            transform: rotate(-180deg);
+            
+            
+            
+        }
+        
+        .slick-next {
+            right: 30%;
+          background-image: url('../images/right-arrow-active.png');
+        }
+        
+        // style for slick-dots
+        
+        .slick-dots{
+            @include flex(inherit,inherit);
+            list-style-type: none;
+            position: absolute;
+            left: 50%;
+            bottom:30px;
+            transform: translateX(-50%);
+            li+li{
+                margin-left: 40px;
+            }
+            li{
+                button{
+                    height: 0;
+                    width: 0;
+                    appearance: none;
+                    font-size: 0;
+                    display: none;
+               
+                }
+                position: relative;
+                &::after{
+                    @include pseudo;
+                    left: 0;
+                    top: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $color-grey;
+                }
+                &:last-child{
+                    margin-right: 15px;
+                }
+            }
+            .slick-active{
+                &::after{
+                    background-color: $color-main;
+                    border-color:$color-main;
+                }
+            }
+        }
+    }
+}
+

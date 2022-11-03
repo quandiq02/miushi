@@ -1,0 +1,21 @@
+@media (min-width:750px) {
+    .reviews {
+        &-main-wrap {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &__wrapper {
+            max-width: 300px;
+            padding: 30px 20px;
+        }
+
+        .container {
+            padding: 0 20px;
+        }
+
+        &__wrapper+&__wrapper {
+            margin-top: 0;
+        }
+    }
+}

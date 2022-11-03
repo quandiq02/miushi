@@ -1,0 +1,167 @@
+.tab{
+    @include bgImg(url("../images/tab-bg.jpg"),no-repeat,center center);
+    background-size: cover;
+    &__input{
+            width: 0;
+            height: 0;
+            appearance: none;
+            position: absolute;
+    }
+    &__title{
+        display: inline-block;
+         @include font(18px,$ffOpenSansBold,700,$color-grey,capitalize,center,1.58);
+         margin-left: 20px;
+         margin-bottom: 20px;
+            margin-top: 20px;
+
+    }
+    .slick-slider{
+        display: none;
+    }
+
+}
+.container{
+    padding:  0 15px;
+}
+.new-slider,.sales-slider{
+    display: none;
+
+    &__item {
+        margin: 0 15px;
+        padding-bottom: 30px;
+        @include flex(center, inherit);
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.08);
+        margin-bottom: 90px;
+        overflow-x: hidden;
+        position: relative;
+        .new-pattern{
+            position: absolute;
+            left: -35px;
+            top: 20px;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            background-color: $color-main;
+            transform: rotate(-50deg);
+        @include font(20px, $ffOpenSansBold, 700, #fff, lowercase, center, 1.422);
+
+        }
+    }
+
+    &__img {
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    &__name {
+        @include font(20px, $ffOpenSansBold, 700, #000, capitalize, center, 1.422);
+    }
+
+    &__info {
+        margin: 15px 0;
+        @include font(12px, $ffOpenSansLight, 300, #000, lowercase, center, 1.667);
+
+
+    }
+
+    &__price {
+        @include flex(space-around, inherit);
+        flex-direction: row;
+
+        .price {
+            transform: translateY(-10px);
+            @include font(12px, $ffRobotoSlabBold, 700, #000, inherit, left, 1.292);
+
+            span {
+                font-size: 22px;
+                transform: translateY(9px);
+
+            }
+        }
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &__quantity {
+        @include flex(inherit, inherit);
+        align-items: center;
+
+        input[type=number] {
+            width: 40px;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        margin: 0 10px;
+        @include flex(space-around, inherit);
+        align-items: center;
+        @include font(14px, $ffOpenSansSemiBold, 600, #fff, uppercase, center, 2.031);
+        background-color: $color-secondary;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 20px;
+
+        i {
+            margin-left: 20px;
+        }
+
+
+    }
+    .slick-arrow{
+        font-size: 0;
+        border: none;
+        background-color: transparent;
+
+    }
+    .slick-dots{
+        display: none;
+    }
+}
+.new-slider{
+    &__img{
+        @include flex(center,inherit);
+        img{
+            width: 70%;
+        }
+    }
+}
+
+.quantity {
+
+    &__plus,
+    &__minus {
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $color-grey
+    }
+
+    &__value {
+        background-color: none;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+    }
+    
+}
+#tab_1:checked ~ .slick-slider:first-of-type{
+    display: block;
+}
+#tab_2:checked ~ .slick-slider:last-of-type{
+    display: block;
+}
+@for $i from 1 to 3 {
+    #tab_#{$i}:checked ~ .tab__title-item#{$i}{
+        color: $color-secondary;
+    }
+}

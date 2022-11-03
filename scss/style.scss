@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: #fcfcfc;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+@import "./mixins";
+
+@import"./header/header-mobile";
+@import"./header/header-tablet";
+@import"./header/header-desktop";
+
+@import"./main-slider/main-slider-mobile";
+@import"./main-slider/main-slider-tablet";
+@import"./main-slider/main-slider-desktop";
+
+@import "./sets/sets-mobile";
+@import "./sets/sets-tablet";
+@import "./sets/sets-desktop";
+
+@import "./rolls/rolls-mobile";
+@import "./rolls/rolls-tablet";
+@import "./rolls/rolls-desktop";
+
+@import "./pizza/pizza-mobile";
+@import "./pizza/pizza-tablet";
+@import "./pizza/pizza-desktop";
+
+@import "./wok/wok-mobile";
+@import "./wok/wok-tablet";
+@import "./wok/wok-desktop";
+
+@import "./tab/tab-mobile";
+@import "./tab/tab-tablet";
+@import "./tab/tab-desktop";
+
+@import "./reasons/reasons-mobile";
+@import "./reasons/reasons-tablet";
+@import "./reasons/reasons-desktop";
+
+@import "./reviews/reviews-mobile";
+@import "./reviews/reviews-tablet";
+@import "./reviews/reviews-desktop";
+
+@import "./form/form-mobile";
+@import "./form/form-tablet";
+@import "./form/form-desktop";
+
+@import "./about/about-mobile";
+@import "./about/about-tablet";
+@import "./about/about-desktop";
+
+@import "./footer/footer-mobile";
+@import "./footer/footer-tablet";
+@import "./footer/footer-desktop";

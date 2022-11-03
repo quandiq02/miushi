@@ -1,0 +1,57 @@
+.reasons {
+    &__title {
+        margin: 40px 0;
+        @include font(44px, $ffLemonTuesdayReg, 400, $color-title, inherit, center, 1.2);
+    }
+
+    &__wrapper {
+        @include flex(center, inherit);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        @include flex(baseline, inherit);
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px;
+        margin: 10px;
+        width: 220px;
+        height: 200px;
+    }
+
+    &__item-img {
+        min-height: 70px;
+        flex-basis: 30%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__item-text {
+
+        margin-top: 10px;
+        @include font(16px, $ffOpenSansReg, 400, $color-darkgrey, inherit, center, 1.777);
+    }
+
+    &__btn {
+        margin-top: 10px;
+        display: block;
+        min-width: 290px;
+        border: 1px solid $color-secondary;
+        border-radius: 5px;
+        @include font(14px, $ffOpenSansBold, 700, $color-secondary, uppercase, center, 2.031);
+    }
+
+    @for $i from 4 to 11 {
+        &__item-#{$i} {
+            display: none;
+        }
+    }
+}
+
+.container {
+    padding: 0 15px;
+}

@@ -1,0 +1,34 @@
+@media (min-width:1170px) {
+    .main-slider {
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        &__title {
+            padding-top: 150px;
+            max-width: 330px;
+            font-size: 110px;
+        }
+
+        &__btn {
+            padding: 15px 70px;
+        }
+
+        &__about {
+            margin: 30px 0;
+            font-size: 26.8px;
+        }
+        &__sale{
+            left: 50%;
+            top: 170px;
+            font-size: 25.8px;
+            width: 120px;
+            height: 120px;
+        }
+        .slick-slide{
+        min-height: 670px;
+        }
+    }
+}

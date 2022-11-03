@@ -1,0 +1,155 @@
+.rolls {
+
+    &__title {
+        display: block;
+        margin: 80px 0 50px 0;
+        @include font(44px, $ffLemonTuesdayReg, 400, $color-title, capitalize, center, 0.646);
+        p{
+            display: inline-block;
+            position: relative;
+            &::after {
+                @include pseudo;
+                left: -100%;
+                top: 0;
+                height: 35px;
+                width: 75px;
+                @include bgImg(url("../images/title-pattern-left.png"), no-repeat, 0 0);
+                background-size: contain;
+            }
+    
+            &::before {
+                @include pseudo;
+                right:-100%;
+                top: 3px;
+                height: 35px;
+                width: 75px;
+                @include bgImg(url("../images/title-pattern-right.png"), no-repeat, 0 0);
+                background-size: contain;
+            }
+        }
+        
+    }
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.rolls-slider {
+    @include flex(center, inherit);
+    
+    &__item {
+        margin: 0 15px;
+        padding-bottom: 30px;
+        @include flex(center, inherit);
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.08);
+        margin-bottom: 90px;
+        position: relative;
+    }
+
+    &__img {
+        @include flex(center,inherit);
+        img {
+            width: 70%;
+            height: auto;
+        }
+
+    }
+
+    &__name {
+        @include font(20px, $ffOpenSansBold, 700, #000, capitalize, center, 1.422);
+    }
+
+    &__info {
+        margin: 15px 0;
+        @include font(12px, $ffOpenSansLight, 300, #000, lowercase, center, 1.667);
+
+
+    }
+
+    &__price {
+        @include flex(space-around, inherit);
+        flex-direction: row;
+
+        .price {
+            transform: translateY(-10px);
+            @include font(12px, $ffRobotoSlabBold, 700, #000, inherit, left, 1.292);
+
+            span {
+                font-size: 22px;
+                transform: translateY(9px);
+
+            }
+        }
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &__quantity {
+        @include flex(inherit, inherit);
+        align-items: center;
+
+        input[type=number] {
+            width: 40px;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        margin: 0 10px;
+        @include flex(space-around, inherit);
+        align-items: center;
+        @include font(14px, $ffOpenSansSemiBold, 600, #fff, uppercase, center, 2.031);
+        background-color: $color-secondary;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 20px;
+
+        i {
+            margin-left: 20px;
+        }
+
+
+    }
+   
+}
+
+.popular{
+    @include flex(center,inherit);
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $color-secondary;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    font-size: 34px;
+    border-radius: 50% ;
+    
+}
+
+.quantity {
+
+    &__plus,
+    &__minus {
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $color-grey;
+    }
+
+    &__value {
+        background-color: none;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+    }
+
+}

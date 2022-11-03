@@ -1,0 +1,26 @@
+@media (min-width:750px) {
+    .form {
+        
+        .container {
+            padding: 0 20px;
+        }
+        &__title{
+            font-size: 54px;
+            span{
+                display: inline-block;
+            }
+        }
+        &-input__sign{
+            justify-content: space-between;
+            align-items: baseline;
+            flex-direction: row;
+        }
+
+        &__input{
+            width: 30%;
+        }
+        &__btn{
+            width: 30%;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@media (min-width:1170px) {
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        &__list {
+            flex-direction: row;
+        }
+
+        &__wrapper {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+    }
+
+    .menu,
+    .sets,
+    .rolls,
+    .wok,
+    .pizza {
+        &__inner {
+            height: auto;
+
+
+        }
+
+        &__title-footer {
+
+            &::after,
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .menu {
+        &__title-footer {
+            display: none;
+        }
+
+        &__inner {
+            margin-top: 7px;
+        }
+
+        &__inner-item {
+            a {
+                @include font(14px, $ffOpenSansReg, 400, #fff, capitalize, left, 1.714);
+            }
+        }
+    }
+
+    .sets {
+        &__inner-item {
+            width: 270px;
+            @include flex(space-between, inherit);
+
+        }
+    }
+}

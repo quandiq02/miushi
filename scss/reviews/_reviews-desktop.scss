@@ -1,0 +1,13 @@
+@media (min-width:1170px) {
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .reviews {
+        &__wrapper:last-of-type {
+            display: flex;
+        }
+    }
+}

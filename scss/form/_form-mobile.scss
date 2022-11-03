@@ -1,0 +1,84 @@
+.form {
+    min-height: 518px;
+    background: #0e3049;
+    background: linear-gradient(103deg, rgba(14, 48, 73, 0.9110994739692753) 0%, rgba(29, 22, 42, 0.8130602582830007) 100%), url('../images/form-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &__wrapper {
+        margin-top: 150px;
+        padding: 55px 0;
+        @include flex(inherit, inherit);
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        margin-bottom: 5px;
+        @include font(12.756, $ffOpenSansReg, 400, #fff, inherit, left, 1.881);
+
+    }
+
+    &__title {
+        span {
+            display: block;
+        }
+
+        @include font(35px, $ffLemonTuesdayReg, 400, #fff, inherit, left, 1.2);
+    }
+
+    &-input__sign {
+        @include flex(inherit, inherit);
+        flex-direction: column;
+    }
+
+    &__input {
+
+        @include font(14px, $ffOpenSansReg, 400, #fff, capitalize, left, 1.714);
+        width: 100%;
+        border: none;
+        outline: none;
+        margin-top: 20px;
+        background-color: transparent;
+        border-bottom: 2px solid #fff;
+        height: 40px;
+        transition: all 200ms linear;
+
+        &::placeholder {
+            color: #fff;
+        }
+
+        padding-left: 10px;
+
+        &:focus {
+            padding-left: 10px;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        @include flex(space-around, inherit);
+        align-items: center;
+        @include font(14px, $ffOpenSansSemiBold, 600, #fff, uppercase, center, 2.031);
+        background-color: $color-secondary;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 40px;
+
+    }
+
+    &__text {
+        margin-top: 20px;
+
+        @include font(12px, $ffOpenSansReg, 400, rgba(255, 255, 255, 0.702), inherit, left, 1.2);
+
+    }
+}
+
+.container {
+    padding: 0 15px;
+}

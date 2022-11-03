@@ -1,0 +1,30 @@
+@media (min-width:750px) {
+    .about{
+        &__btn{
+            display: none;
+        }
+        &__text{
+            p{
+                display: flex;
+            }
+            p+p+p+p{
+                display: flex;
+            }
+            img{
+                width: auto;
+                height: 100%;
+                 float: right;
+            }
+            
+            p{
+                padding-right: 20px;
+              }
+              p:not(:last-of-type){
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .container{
+        padding: 0 20px;
+    }
+}

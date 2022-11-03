@@ -1,0 +1,149 @@
+.footer {
+    background-color: $bg-footer;
+
+    &__wrapper {
+        margin-top: 100px;
+    }
+
+    &__list {
+        list-style-type: none;
+        @include flex(space-between, inherit);
+        flex-direction: column;
+    }
+
+    &__bottom {
+        @include flex(center, inherit);
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__agreement {
+        margin: 30px 0;
+        order: 2;
+        text-decoration: underline;
+        @include font(12px, $ffOpenSansReg, 400, $footer-item-color, inherit, left, 2.5);
+    }
+
+    &__socials {
+        margin-top: 20px;
+        order: 1;
+
+        a {
+            display: inline-block;
+
+            i {
+                @include flex(center, inherit);
+                flex-direction: row;
+                align-items: center;
+                background-color: #fff;
+                color: $bg-footer;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__copyright {
+        order: 3;
+        @include font(12px, $ffOpenSansReg, 400, #6b96a5, inherit, left, 2.5);
+
+    }
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.menu,
+.sets,
+.rolls,
+.wok,
+.pizza {
+    &__input-footer {
+        display: none;
+        font-size: 0;
+        height: 0;
+        width: 0;
+    }
+
+    &__title-footer {
+        position: relative;
+        @include flex(baseline, inherit);
+        align-items: center;
+        min-height: 60px;
+        @include font(16px, $ffOpenSansBold, 700, #fff, inherit, left, 1.25);
+
+        &::after {
+            @include pseudo;
+            top: 100%;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $footer-border-color;
+        }
+
+        &::before {
+            @include pseudo($content:'\f107');
+            top: 50%;
+            right: 0px;
+            transform: translate(-50%, -50%);
+            height: 20px;
+            width: 20px;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transform-origin: center;
+            transition: all 500ms linear;
+        }
+    }
+
+    &__inner {
+        height: 0;
+        overflow-y: hidden;
+        list-style-type: none;
+        transition: all 400ms linear;
+
+
+    }
+
+    &__inner-item {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        a {
+            @include font(12px, $ffOpenSansReg, 400, $footer-item-color, inherit, left, 2.5);
+
+        }
+    }
+
+}
+
+#fmenu_1:checked~.menu__title-footer::before,
+#sets_1:checked~.sets__title-footer::before,
+#rolls_1:checked~.rolls__title-footer::before,
+#wok_1:checked~.wok__title-footer::before,
+#pizza_1:checked~.pizza__title-footer::before {
+    transform: rotate(180deg) translateX(20px) translateY(10px);
+}
+
+#fmenu_1:checked~.menu__inner {
+    height: 280px;
+}
+
+#sets_1:checked~.sets__inner {
+    height: 160px;
+}
+
+#rolls_1:checked~.rolls__inner {
+    height: 190px;
+}
+
+#wok_1:checked~.wok__inner {
+    height: 190px;
+}
+
+#pizza_1:checked~.pizza__inner {
+    height: 130px;
+}

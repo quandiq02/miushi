@@ -1,0 +1,13 @@
+@media (min-width:1170px) {
+.form{
+    background: url('../images/form-bg.jpg');
+    background-repeat: no-repeat;
+    &__wrapper{
+        padding-left:300px;
+    }
+}
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
